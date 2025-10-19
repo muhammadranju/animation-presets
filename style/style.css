@@ -1,0 +1,134 @@
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --muted: #9aa3b2;
+  --accent: #64b5f6;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Inter, Segoe UI, Roboto, Arial;
+  background: linear-gradient(180deg, #071025 0%, #071b2a 100%);
+  color: #e6eef6;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+}
+.wrap {
+  width: 100%;
+  max-width: 1000px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.7);
+}
+h1 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 16px;
+}
+.panel {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 12px;
+  border-radius: 10px;
+}
+label {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+select,
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: transparent;
+  color: inherit;
+}
+.row {
+  display: flex;
+  gap: 8px;
+}
+.row > * {
+  flex: 1;
+}
+.preview-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+}
+.box {
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1e293b, #0f1724);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.controls {
+  display: grid;
+  gap: 10px;
+}
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.preset-btn {
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  color: #e6eef6;
+  cursor: pointer;
+}
+.preset-btn.active {
+  outline: 2px solid rgba(100, 181, 246, 0.18);
+  background: rgba(100, 181, 246, 0.06);
+}
+button {
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 0;
+  background: var(--accent);
+  color: #072034;
+  font-weight: 600;
+}
+textarea#cssOut {
+  height: 200px;
+  background: #071022;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  color: #cfe9ff;
+  padding: 12px;
+  border-radius: 8px;
+  font-family: monospace;
+}
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .box {
+    width: 120px;
+    height: 120px;
+  }
+}
